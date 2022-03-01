@@ -25,5 +25,23 @@ export class InfluxDb implements ICredentialType {
 			required: true,
 			description: 'Generated API Token from InfluxDB 2.x.',
 		},
+		{
+			displayName: 'Organization',
+			name: 'org',
+			type: 'string',
+			default: '',
+			placeholder: 'my_org',
+			required: false,
+			description: 'Default Organization',
+		},
+		{
+			displayName: 'Bucket',
+			name: 'bucket',
+			type: 'string',
+			default: '',
+			placeholder: 'my_bucket',
+			required: false,
+			description: 'Default Bucket',
+		},
 	];
 }
