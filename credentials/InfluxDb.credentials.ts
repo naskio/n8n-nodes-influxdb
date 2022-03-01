@@ -31,8 +31,8 @@ export class InfluxDb implements ICredentialType {
 			type: 'string',
 			default: '',
 			placeholder: 'my_org',
-			required: false,
-			description: 'Default Organization',
+			required: true,
+			description: 'Default Organization (it can be overridden in the node settings).',
 		},
 		{
 			displayName: 'Bucket',
@@ -40,8 +40,8 @@ export class InfluxDb implements ICredentialType {
 			type: 'string',
 			default: '',
 			placeholder: 'my_bucket',
-			required: false,
-			description: 'Default Bucket',
+			required: true,
+			description: 'Default Bucket (it can be overridden in the node settings).',
 		},
 	];
 }
