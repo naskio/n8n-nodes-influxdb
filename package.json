@@ -43,7 +43,7 @@
   ],
   "n8n": {
     "credentials": [
-      "dist/credentials/InfluxDbApi.credentials.js"
+      "dist/credentials/InfluxDb.credentials.js"
     ],
     "nodes": [
       "dist/nodes/InfluxDb/InfluxDb.node.js"
