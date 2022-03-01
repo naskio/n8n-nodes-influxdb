@@ -2,6 +2,8 @@
 
 InfluxDB 2.x node for n8n.
 
+[![InfluxDB 2.x node](https://github.com/naskio/n8n-nodes-changed/blob/main/nodes/InfluxDb/influxdb.svg?raw=true)](https://nask.io)
+
 # Features
 
 - Read data from InfluxDB 2.x.
