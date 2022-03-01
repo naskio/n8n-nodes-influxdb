@@ -63,7 +63,7 @@ export const nodeDescription: INodeTypeDescription = {
 			required: true,
 			default: '',
 			placeholder: 'my_measurement',
-			description: 'Measurement (ie Table).',
+			description: 'Measurement (ie table).',
 		},
 		{
 			displayName: 'Tags',
@@ -80,7 +80,7 @@ export const nodeDescription: INodeTypeDescription = {
 			default: '',
 			placeholder: 'host,region',
 			description:
-				'Comma separated list of the properties which will be used as tags.',
+				'Comma separated list of the properties which will be used as tags (ie indexed columns).',
 		},
 		{
 			displayName: 'Fields',
@@ -97,7 +97,7 @@ export const nodeDescription: INodeTypeDescription = {
 			default: '',
 			placeholder: 'name,value,price',
 			description:
-				'Comma separated list of the properties which will be used as fields.',
+				'Comma separated list of the properties which will be used as fields (ie no-indexed columns).',
 		},
 		{
 			displayName: 'Options',
@@ -128,7 +128,7 @@ export const nodeDescription: INodeTypeDescription = {
 					type: 'string',
 					default: '',
 					placeholder: 'my_org',
-					description: 'Override default organization.',
+					description: 'Override default organization (ie workspace).',
 				},
 				{
 					displayName: 'Bucket',
@@ -136,7 +136,7 @@ export const nodeDescription: INodeTypeDescription = {
 					type: 'string',
 					default: '',
 					placeholder: 'my_bucket',
-					description: 'Override default bucket.',
+					description: 'Override default bucket (ie database).',
 				},
 			],
 		},
@@ -185,7 +185,7 @@ export const nodeDescription: INodeTypeDescription = {
 					type: 'string',
 					default: '',
 					placeholder: 'my_org',
-					description: 'Override default organization.',
+					description: 'Override default organization (ie workspace).',
 				},
 			],
 		},
