@@ -25,6 +25,8 @@
 		"src/**/*",
 		"nodes/**/*",
 		"nodes/**/*.json",
+		"nodes/**/*.svg",
+		"nodes/**/*.png",
 		"test/**/*"
 	],
 	"exclude": [

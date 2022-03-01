@@ -23,7 +23,7 @@ export class InfluxDb implements ICredentialType {
 			},
 			default: '',
 			required: true,
-			description: 'Generated API Token from InfluxDB 2.x.',
+			description: 'Generated API Token from InfluxDB 2.x (You can generate an API token from the "API Tokens Tab" in the UI)',
 		},
 		{
 			displayName: 'Organization',
