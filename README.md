@@ -1,8 +1,8 @@
 # n8n-nodes-influxdb
 
-InfluxDB 2.x node for n8n.
+<img alt="InfluxDB 2.x node" src="https://raw.github.com/naskio/n8n-nodes-influxdb/main/nodes/InfluxDb/influxdb.svg?sanitize=true" width="128"/>
 
-[![InfluxDB 2.x node](https://github.com/naskio/n8n-nodes-changed/blob/main/nodes/InfluxDb/influxdb.svg?raw=true)](https://nask.io)
+InfluxDB 2.x node for n8n.
 
 # Features
 
