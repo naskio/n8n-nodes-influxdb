@@ -100,6 +100,51 @@ export const nodeDescription: INodeTypeDescription = {
 				'Comma separated list of the properties which will be used as fields (ie no-indexed columns).',
 		},
 		{
+			displayName: 'Default Tags',
+			name: 'defaultTags',
+			placeholder: 'Add new default tag',
+			description: 'Add default tags.',
+			type: 'fixedCollection',
+			displayOptions: {
+				show: {
+					operation: [
+						'write',
+					],
+				},
+			},
+			typeOptions: {
+				multipleValues: true,
+				sortable: true,
+			},
+			default: {},
+			options: [
+				{
+					displayName: 'Default Tag',
+					name: 'defaultTag',
+					values: [
+						{
+							displayName: 'Default Tag Name',
+							name: 'defaultTagName',
+							type: 'string',
+							default: '',
+							required: true,
+							placeholder: 'region',
+							description: 'The default tag name.',
+						},
+						{
+							displayName: 'Default Tag Value',
+							name: 'defaultTagValue',
+							type: 'string',
+							default: '',
+							required: true,
+							placeholder: 'north-africa-1',
+							description: 'The default tag value.',
+						},
+					],
+				},
+			],
+		},
+		{
 			displayName: 'Options',
 			name: 'options',
 			type: 'collection',
