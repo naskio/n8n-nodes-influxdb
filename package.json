@@ -82,6 +82,9 @@
       "tsx",
       "js",
       "json"
+    ],
+    "setupFiles": [
+      "<rootDir>/__tests__/setupEnvironment.ts"
     ]
   }
 }
