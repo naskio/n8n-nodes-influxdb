@@ -117,14 +117,6 @@ export const nodeDescription: INodeTypeDescription = {
 					displayName: 'Timestamp Field',
 					name: 'timestampField',
 					type: 'string',
-					displayOptions: {
-						show: {
-							operation: [
-								'write',
-							],
-						},
-					},
-					required: true,
 					default: '',
 					placeholder: 'createdAt',
 					description:
@@ -134,7 +126,6 @@ export const nodeDescription: INodeTypeDescription = {
 					displayName: 'Organization',
 					name: 'org',
 					type: 'string',
-					required: true,
 					default: '',
 					placeholder: 'my_org',
 					description: 'Override default organization.',
@@ -143,7 +134,6 @@ export const nodeDescription: INodeTypeDescription = {
 					displayName: 'Bucket',
 					name: 'bucket',
 					type: 'string',
-					required: true,
 					default: '',
 					placeholder: 'my_bucket',
 					description: 'Override default bucket.',
@@ -193,7 +183,6 @@ export const nodeDescription: INodeTypeDescription = {
 					displayName: 'Organization',
 					name: 'org',
 					type: 'string',
-					required: true,
 					default: '',
 					placeholder: 'my_org',
 					description: 'Override default organization.',
