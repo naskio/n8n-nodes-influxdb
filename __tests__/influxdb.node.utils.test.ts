@@ -20,8 +20,8 @@ test('Write Data', async () => {
 	const tags = ['tag1', 'tag2'];
 	const fields = ['valueFloat', 'valueInt', 'valueString', 'valueBoolean'];
 	const defaultTags = {region: 'north_africa_0', host: 'nask.io'};
-	// const timestampField = 'createdAt';
-	const timestampField = '';
+	const timestampField = 'createdAt';
+	// const timestampField = '';
 
 	const data = [{
 		tag1: 'tagValue1',
@@ -30,7 +30,7 @@ test('Write Data', async () => {
 		valueInt: 3,
 		valueString: 'stringValue',
 		valueBoolean: true,
-		createdAt: new Date().toISOString(),
+		createdAt: new Date(2025, 3).toISOString(),
 	}];
 
 	const res = await writeData(client, data as [], ORGANIZATION, BUCKET, measurement, tags, fields, defaultTags, timestampField);

@@ -26,6 +26,18 @@ yarn run demo
 yarn run demo:build
 ```
 
+## Test
+
+### Setup
+
+Set up a test environment:
+
+```shell
+cd __tests__/
+cp setupEnvironment.example.ts setupEnvironment.ts
+nano setupEnvironment.ts
+```
+
 ## Release
 
 To release a new version, create a new release (with tag) on GitHub.

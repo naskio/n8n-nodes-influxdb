@@ -15,6 +15,9 @@ export function initClient(url: string, token: string): InfluxDB {
 /**
  * Write data to InfluxDB 2.x.
  *
+ * https://influxdata.github.io/influxdb-client-js/influxdb-client.writeprecisiontype.html
+ * ttps://influxdata.github.io/influxdb-client-js/influxdb-client.writeoptions.html
+ *
  * @param client
  * @param data
  * @param org
@@ -58,7 +61,7 @@ export async function writeData(client: InfluxDB, data: [], org: string, bucket:
 					break;
 				}
 				default: {
-					point = point.stringField(field, dataItem[field] as string);
+					point = point.stringField(field, dataItem[field]);
 					break;
 				}
 			}
@@ -66,7 +69,12 @@ export async function writeData(client: InfluxDB, data: [], org: string, bucket:
 
 		// adding timestamp
 		if (timestampField) {
-			point = point.timestamp(new Date(dataItem[timestampField]));
+			if (dataItem[timestampField]) {
+				const timestampValue = new Date(dataItem[timestampField]);
+				if (timestampValue) {
+					point = point.timestamp(timestampValue);
+				}
+			}
 		}
 
 		// writing data
@@ -92,20 +100,12 @@ export function queryData(client: InfluxDB, org: string, query: string): Promise
 		queryApi.queryRows(query, {
 			next(row, tableMeta) {
 				const parsedObject = tableMeta.toObject(row);
-				// const columns = tableMeta.columns;
-				// console.log('columns => ', columns);
-				// console.log('row => ', row);
-				// console.log('object => ', parsedObject);
-				// console.log(`object_formatted => ${parsedObject._time} ${parsedObject._measurement}: ${parsedObject._field}=${parsedObject._value}`);
 				results.push(parsedObject);
 			},
 			error(error) {
-				// console.error(error);
-				// console.log('Finished ERROR');
 				reject(error);
 			},
 			complete() {
-				// console.log('Finished SUCCESS');
 				resolve(results);
 			},
 		});
