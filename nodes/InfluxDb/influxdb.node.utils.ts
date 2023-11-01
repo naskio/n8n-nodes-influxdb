@@ -48,13 +48,9 @@ export async function writeData(client: InfluxDB, data: [], org: string, bucket:
 					break;
 				}
 				case 'number': {
-					if (Number.isInteger(dataItem[field])) { // int
-						point = point.intField(field, dataItem[field] as number);
-						break;
-					} else { // float
-						point = point.floatField(field, dataItem[field] as number);
-						break;
-					}
+					// write all numbers as floats, see https://github.com/influxdata/influxdb/issues/3460#issuecomment-124747104
+					point = point.floatField(field, dataItem[field] as number);
+					break;
 				}
 				case 'string': {
 					point = point.stringField(field, dataItem[field] as string);
